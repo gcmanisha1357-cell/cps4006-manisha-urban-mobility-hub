@@ -1,0 +1,818 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f7fb;
+  color: #172033;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 48px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.logo span {
+  width: 42px;
+  height: 42px;
+  background: #12355b;
+  color: white;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  font-weight: 800;
+}
+
+.logo h1 {
+  font-size: 18px;
+  color: #12355b;
+}
+
+.logo p {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.navbar nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.navbar button {
+  border: none;
+  background: transparent;
+  color: #475569;
+  padding: 9px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.navbar button.active,
+.navbar button:hover {
+  background: #12355b;
+  color: white;
+}
+
+/* MAIN */
+
+main {
+  padding: 40px 48px;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.page h2 {
+  font-size: 42px;
+  margin-bottom: 14px;
+  color: #12355b;
+}
+
+.pageIntro {
+  color: #64748b;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* BUTTONS */
+
+.primaryBtn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.secondaryBtn {
+  background: white;
+  border: 1px solid #cbd5e1;
+  padding: 12px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.primaryBtn:hover,
+.secondaryBtn:hover {
+  opacity: 0.9;
+}
+
+/* HOME */
+
+.homeSimple {
+  display: grid;
+  grid-template-columns: 1.5fr 0.7fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.homeText h2 {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.homeText p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.homeActions {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.homeImage {
+  display: flex;
+  justify-content: center;
+}
+
+.homeImage img {
+  width: 100%;
+  max-width: 340px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.homeFeatures {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.featureBox {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+}
+
+.featureBox h3 {
+  margin-bottom: 8px;
+  color: #12355b;
+}
+
+.featureBox p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* GENERAL PANELS + FORM */
+
+.panel {
+  background: white;
+  padding: 22px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.form input,
+.form select,
+.panel input,
+.panel select {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  margin: 8px 0 14px;
+  width: 100%;
+}
+
+/* JOURNEY */
+
+.journeyLayout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.resultCard {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 16px;
+}
+
+.journeyStats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+  margin-bottom: 12px;
+}
+
+.journeyStats div {
+  background: #f8fafc;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.journeyStats span {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.suggestBox {
+  position: relative;
+}
+
+.suggestions {
+  background: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  margin-top: 6px;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  z-index: 20;
+}
+
+.suggestions button {
+  width: 100%;
+  border: none;
+  background: white;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  display: grid;
+  gap: 4px;
+}
+
+.suggestions button:hover {
+  background: #f1f5f9;
+}
+
+.suggestions span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.badge {
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 6px 10px;
+  border-radius: 999px;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.legs {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.legItemPremium {
+  display: flex;
+  gap: 10px;
+  background: #f8fafc;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.legIcon {
+  font-size: 18px;
+}
+
+.legTitle {
+  font-weight: 700;
+  color: #12355b;
+  display: block;
+}
+
+.legText {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* STATUS */
+
+.modeSection {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+.statusControls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.statusControls button {
+  background: #f1f5f9;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.statusControls button.activeMode {
+  background: #12355b;
+  color: white;
+}
+
+.modeHeader {
+  margin-top: 22px;
+}
+
+.modeHeader span {
+  color: #64748b;
+}
+
+.statusGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.statusCard {
+  background: white;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+}
+
+.statusCard h3 {
+  color: #12355b;
+  margin-bottom: 8px;
+}
+
+.statusCard p {
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.goodStatus {
+  background: #dcfce7;
+  padding: 6px 10px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.warningStatus {
+  background: #fef3c7;
+  padding: 6px 10px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+/* MODES */
+
+.modesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.modeCard {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.modeCard img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.modeContent {
+  padding: 20px;
+}
+
+.modeContent h3 {
+  color: #12355b;
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.modeBest {
+  color: #2563eb;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.modeContent p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.modeInfo {
+  margin-top: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.modeInfo span {
+  background: #f8fafc;
+  padding: 10px;
+  border-radius: 12px;
+  color: #475569;
+  font-size: 14px;
+}
+
+/* SUSTAINABILITY */
+
+.sustainGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 24px 0;
+}
+
+.sustainCard {
+  background: white;
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+}
+
+.sustainCard h3 {
+  color: #12355b;
+  margin-bottom: 8px;
+}
+
+.sustainCard p {
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.sustainStats {
+  margin: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sustainStats span {
+  background: #f1f5f9;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* COMPARISON */
+
+.comparisonPanel {
+  margin-bottom: 24px;
+}
+
+.comparisonGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.comparisonCard {
+  background: white;
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+}
+
+.comparisonCard h3 {
+  color: #12355b;
+  margin-bottom: 12px;
+}
+
+.comparisonStats {
+  display: grid;
+  gap: 8px;
+}
+
+.comparisonStats span {
+  background: #f1f5f9;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+/* DASHBOARD */
+
+.dashboardHero,
+.accessHero {
+  background: white;
+  border-radius: 22px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  align-items: center;
+  border: 1px solid #e2e8f0;
+  margin: 24px 0;
+}
+
+.dashboardHero h3,
+.accessHero h3 {
+  font-size: 28px;
+  color: #12355b;
+  margin-bottom: 10px;
+}
+
+.dashboardHero p,
+.accessHero p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.dashboardHero img,
+.accessHero img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.dashboardSummary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.summaryCard {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.summaryCard h3 {
+  font-size: 30px;
+  color: #2563eb;
+}
+
+.summaryCard p {
+  color: #64748b;
+}
+
+.dashboardPanel {
+  margin-bottom: 24px;
+}
+
+.modeButtons {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.modeButtons button {
+  border: none;
+  background: #f1f5f9;
+  padding: 10px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.modeButtons button.activeMode {
+  background: #12355b;
+  color: white;
+}
+
+.dashboardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 18px;
+}
+
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.dashboardCard {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+}
+
+.journeyIcon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.dashboardCard h3 {
+  color: #12355b;
+  margin-bottom: 12px;
+}
+
+.dashboardStats {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.dashboardStats span {
+  background: #f1f5f9;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.dashboardCard button {
+  background: #fee2e2;
+  color: #991b1b;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* ACCESSIBILITY */
+
+.accessGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.accessCard {
+  background: white;
+  padding: 22px;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+}
+
+.accessCard span {
+  font-size: 28px;
+}
+
+.accessCard h3 {
+  color: #12355b;
+  margin: 12px 0 8px;
+}
+
+.accessCard p {
+  color: #64748b;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* GENERAL */
+
+.emptyState,
+.result {
+  background: white;
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  margin-top: 16px;
+}
+
+.emptyState h3 {
+  color: #12355b;
+  margin-bottom: 8px;
+}
+
+.emptyState p,
+.result {
+  color: #64748b;
+}
+
+/* FOOTER */
+
+.footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 18px 48px;
+  margin-top: 40px;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 20px;
+  }
+
+  .navbar nav {
+    justify-content: flex-start;
+  }
+
+  main {
+    padding: 24px 20px;
+  }
+
+  .page h2 {
+    font-size: 30px;
+  }
+
+  .homeSimple,
+  .journeyLayout,
+  .homeFeatures,
+  .statusGrid,
+  .modesGrid,
+  .sustainGrid,
+  .comparisonGrid,
+  .dashboardHero,
+  .accessHero,
+  .dashboardSummary,
+  .dashboardGrid,
+  .accessGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .homeImage img,
+  .dashboardHero img,
+  .accessHero img {
+    max-width: 100%;
+    height: 180px;
+  }
+
+  .journeyStats {
+    grid-template-columns: 1fr;
+  }
+
+  .modeCard img {
+    height: 170px;
+  }
+  .bestFor {
+  display: block;
+  margin-top: 14px;
+  color: #2563eb;
+  font-size: 14px;
+}
+.best {
+  background: #dcfce7;
+  color: #166534;
+  font-weight: 700;
+}
+
+.bestEco {
+  background: #dbeafe;
+  color: #1e40af;
+  font-weight: 700;
+}
+.fareNote {
+  margin-top: 8px;
+  margin-bottom: 12px;
+  color: #64748b;
+  font-size: 14px;
+}
+}
